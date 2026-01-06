@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+body{
+        margin: 60px;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #5a6b3d 0%, #747e47 100%);
+        color: var(--cor-texto);
+        min-height: 100vh;
+        }
+
+.header{
+    text-align: center;
+    color: white;
+}
+
+    input, button{
+    height: 50px;
+    }
+
+    .container{
+        background: white;
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        max-width: 800px;
+        margin: 0 auto;
+       
+    }
+                /*input pesquisa*/
+                
+.pesquisa input {
+    flex: 1;
+    border: 2px solid #5a6b3d;
+    border-radius: 25px;
+    padding: 10px 15px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+            /* Efeito quando o usuário clica no input */
+        .pesquisa input:focus {
+            border-color: rgb(110, 110, 13);
+            box-shadow: 0 0 8px rgba(24, 113, 18, 0.732);
+        }
+        /*quando o usuario digita*/
+        .pesquisa input:not(:placeholder-shown) {
+            background-color: #ffeaea; /* exemplo: fundo rosado */
+            border-color: rgb(110, 110, 13);
+        }
+
+                /*botao*/
+.botao{
+    border: 2px solid #5a6b3d;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+    .botao:hover{
+        background-color: #ffeaea;
+    }
+
+                /*PESQUISA COM OS DADOS DESEJADOS*/
+.titulo{
+    color: #5a6b3d;
+    font-weight: bold;
+}
+.check {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+    /* Esconde o checkbox padrão */
+    .check input[type="radio"] {
+    display: none;
+    }
+
+    /* Estilo dos botões de filtro */
+    .check label {
+    padding: 8px 14px;
+    border: 2px solid #5a6b3d;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: white;
+    color: #5a6b3d;
+    }
+
+    /* Esconde o checkbox padrão */
+    .check input[type="radio"] {
+    display: none;
+    }
+
+    /* Estilo dos botões de filtro */
+    .check label {
+    padding: 8px 14px;
+    border: 2px solid #5a6b3d;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: white;
+    color: #5a6b3d;
+    user-select: none;
+    }
+
+    /* Hover */
+    .check label:hover {
+    background-color: #ffeaea;
+    }
+
+    /* Quando marcado */
+    .check input[type="radio"]:checked + label {
+    background-color: #5a6b3d;
+    color: white;
+    font-weight: bold;
+    }
+
+
+                /*CARDS DOS IMOVEIS*/
+.card {
+            margin-top: 20px;
+            width: 50vh;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            background: #fafafa;
+            color: var(--cor-secundaria);
+            padding: 1rem;
+            border-radius: 8px;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+        .imoveis{
+            /*QUEBRA A LINHA SE NAO TIVER MAIS ESPAÇO */
+            flex-wrap: wrap;  
+            gap: 20px;        
+            justify-content: center;
+            display: flex;
+        }
+        .imagem{
+             width: 100%;       /* ocupa a largura do card */
+            height: 200px; 
+            object-fit: cover;
+           
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #999;
+        }
+        .empty-state svg {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+            opacity: 0.3;
+        }

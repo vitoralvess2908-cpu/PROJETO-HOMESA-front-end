@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>pesquisa</title>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="SCRIPT/pesquisaImovel.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="ESTILO\stylePesquisa.css">
+</head>
+    <body>
+         <div class="header">
+            <h1>🏡 Encontre seu Imóvel Ideal</h1>
+            <p>Pesquise por CEP e filtre pelos seus critérios</p>
+        </div>
+        <div class="container">
+
+            <div class="pesquisa">
+                <input type="search" placeholder="Pesquisar pelo CEP" aria-label="Search" id="cep">                   
+                <button type="submit"  onclick="pesquisaImovel()" class="botao">pesquisar</button>
+            </div>
+
+            <div class="arguments">
+                <span class="titulo">Tamanho</span>
+                <div class="check">
+                    <input type="radio" id="pequeno" name="tamanho" value="pequeno">
+                    <label for="pequeno">Pequeno</label>
+
+                    <input type="radio" id="medio" name="tamanho" value="medio">
+                    <label for="medio">Médio</label>
+
+                    <input type="radio" id="grande" name="tamanho" value="grande">
+                    <label for="grande">Grande</label>
+                </div>
+            </div>
+
+            <div class="arguments">
+            <span class="titulo">Preço</span>
+                <div class="check">
+                <input type="radio" id="baixo" name="preco" value="baixo">
+                <label for="baixo">Até R$ 100 mil</label>
+
+                <input type="radio" id="medio-preco" name="preco" value="medio">
+                <label for="medio-preco">R$ 100 mil - R$ 300 mil</label>
+
+                <input type="radio" id="alto" name="preco" value="alto">
+                <label for="alto">Acima de R$ 300 mil</label>
+                </div>
+            </div>
+        </div>    
+        <div class="imoveis" id="cepResult">
+            <!-- Os cards dos imóveis aparecerão aqui -->
+            <div class="empty-state">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+                <p>Use os filtros acima para encontrar imóveis</p>
+            </div>
+        </div>                   
+    </body>
+</html>

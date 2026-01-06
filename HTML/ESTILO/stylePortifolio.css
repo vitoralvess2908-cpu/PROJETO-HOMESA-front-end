@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+:root {
+    --cor-principal: #4CAF50;
+    --cor-secundaria: #2E7D32;
+    --cor-fundo: #fdfdfd;
+    --cor-texto: #333;
+}
+
+
+body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        background-color: var(--cor-fundo);
+        color: var(--cor-texto);
+        }
+h2{
+    color: var(--cor-texto);
+}
+        /*NAV BAR*/
+        .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        background: var(--cor-secundaria);
+        padding: 15px 22px;
+        
+        }
+        .logo{
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        }
+        .nav-links{
+        text-decoration: none;
+        color: white;
+        display: flex;
+        list-style: none;
+        gap: 20px;
+        font-size: 16px;
+        transition: 0.3s;
+        }
+        .nav-links li a{
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        transition: 0.3s;
+        }
+        .nav-links li a:hover{
+        color: #c8f5c8;
+        }
+
+        /*DIV DE CONTAINER*/
+        .d{
+        width: 100%;
+        height: 100vh;
+        padding:  20px;
+        box-sizing: border-box; 
+        background-color: lightblue;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        background: linear-gradient(to right, var(--cor-principal), var(--cor-secundaria));
+        }
+        .d img {
+        border-radius: solid black 10px;
+        width: 50%;           
+        height: auto; 
+        margin-right: 20px;
+        }
+        .d h1,p{
+        margin-left: 70px;
+        display: flex;
+        font-weight: bold;
+        max-width: 50%;
+
+        }
+        
+        /*sobre me*/
+        .sobreme{
+            align-items: center;
+            display: flex;
+            margin-left: 9%;
+            padding: 10%;
+            
+        }
+        .sobreme h2{
+            font-size: 70px;
+        }
+        .avatar{
+            width: 400px;  
+        }
+         a i {
+        font-size: 24px;
+        color: var(--cor-secundaria);
+        margin: 0 10px;
+        transition: color 0.3s;
+        border-radius: 50%;
+        }
+
+        a i:hover{
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2); 
+        }
+
+
+        /*skils*/
+        .skills-cloud h2{
+            padding-left: 20%;
+        }
+        .skills-cloud {
+        padding-left: 20%;
+        display: flex;
+        margin-bottom: 80px;
+        flex-wrap: wrap;
+        gap: 10px; /* espaço entre os “blocos” */
+        }
+
+        .skills-cloud span {
+        
+        background-color: #f0f0f0;
+        padding: 8px 12px;
+        border-radius: 20px;
+        font-size: 16px;
+        color: #333;
+        transition: transform 0.3s, background-color 0.3s;
+        cursor: default;
+        }
+
+        .skills-cloud span:hover {
+        transform: scale(1.2);         /* aumenta ao passar o mouse */
+        background-color: #0077b5;     /* muda cor ao passar o mouse */
+        color: #fff;
+        }
+
+        /*Projetos*/ 
+        #projetos h2{
+            padding: 20px;
+            text-align: center;
+        }
+         h2 {
+            color: var(--cor-principal);
+            margin-bottom: 1rem;
+        }
+         .projetos {
+            align-items: center;
+            display: grid;
+            width: 50%;
+            margin-left: 20%;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        div #projetos{
+             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            background: #fafafa;
+            color: var(--cor-secundaria);
+            padding: 1rem;
+            border-radius: 8px;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+        .card a{
+            display: flex;
+        }
+
+        /*rodape*/
+        footer {
+        background: var(--cor-secundaria);
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 2rem;
+        }
+        .footer a {
+        color: var(--cor-fundo);
+        text-decoration: none;
+        
+        }
+        .footer p{
+            padding: 2px;
+        }

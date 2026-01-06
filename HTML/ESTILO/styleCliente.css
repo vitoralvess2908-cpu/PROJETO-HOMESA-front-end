@@ -1,0 +1,137 @@
+body{
+    margin: 0;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: white;
+    color: white;
+}
+
+.header{
+    background: #3b411ccc;
+    height: 52px;
+    padding: 15px 22px;
+    align-items: center;
+    display: flex;
+}
+
+
+.comprar{
+    border-radius: 20px;
+    border: none;
+    text-decoration: none;
+    background: #3d441e;
+    transition: 0.3s;
+    padding: 20px;
+    width: 700px;
+    margin: auto;
+    cursor: pointer;
+    color: white;
+}
+.comprar p{
+    color: white;
+}
+.comprar a{
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+}
+.comprar a:hover{
+    background: #0d2b1b;
+}
+.logo{
+    display: flex;
+    color: white;
+    font-size: x-large;
+    object-fit: cover;
+}
+
+.cliente{
+    background: white;
+    padding: 20px;
+    height: 40vh;
+    margin: auto;
+    
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    width: 700px;
+}
+
+.perfil{
+    position: relative;
+    right: 170px;
+    object-fit: cover;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-position: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.div-inf{
+    flex-direction: column;
+    position: relative;
+    left: 200px;
+    bottom: 180px;
+}
+
+.imoveis,p{
+    color: #3b411c;
+}
+
+.card,p{
+    color: #3b411c;
+}
+.card{
+    padding: 20px;
+    background: white;
+    height: 55vh;
+    position: relative;
+    flex-direction: column;
+    margin: 0% auto 30px auto;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    width: 600px;
+}
+
+.imagem{
+    object-fit: cover;
+    width: 90vh;
+    height: 240px;
+    border-radius: 8px;
+}
+
+
+.icon{
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+    object-fit: cover;
+    position: relative;
+    bottom: 2px;
+}
+.card button{
+    margin-top: 15px;
+    padding: 12px 30px;
+    background: #747e47;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 85vh;
+}
+
+.card button:hover{
+    background: #3d441e;
+}
+.div-info{
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}

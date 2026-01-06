@@ -1,0 +1,170 @@
+body{
+    margin: 0;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    background-color: white;
+}
+
+.logo{
+    color: white;
+    font-size: x-large;
+    
+}
+.sidebar{
+    width: 200px;
+    height: 100vh;
+    background: #2c3e50;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 20px;
+}
+.sidebar a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.sidebar p{
+    font-weight: bold;
+    font-size: xx-large;
+    color: white;
+}
+.sidebar a:hover {
+    background-color: #1159a0;
+}
+
+.content{
+    margin-left: 220px;
+    padding: 20px;
+}
+.content h1{
+    color: #0d1c2b;
+}
+
+.cadastrar{
+    background: #30577d;
+    border-radius: 20px;
+    padding: 20px;
+    width: 700px;
+    margin-left: 500px;
+    text-decoration: none;
+    border: none;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.cadastrar p{
+    color: wheat;
+}
+.cadastrar a{
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+}
+.cadastrar a:hover{
+    background: #0d1c2b;
+}
+.cliente{
+    background: white;
+    padding: 20px;
+    height: 40vh;
+    margin: 0% auto;
+    margin-left: 500px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    width: 700px;
+}
+.cliente h3{
+    color: #0d1c2b;
+}
+
+.perfil{
+    position: relative;
+    right: 170px;
+    object-fit: cover;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-position: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.div-inf{
+    flex-direction: column;
+    position: relative;
+    left: 200px;
+    bottom: 180px;
+}
+
+
+.imoveis{
+    margin-left: 210px;
+}
+
+.imoveis,p{
+    color: #2c3e50;
+}
+
+.card,p{
+    color: #2c3e50;
+}
+.card{
+    padding: 20px;
+    background: white;
+    height: 55vh;
+    position: relative;
+    flex-direction: column;
+    margin: 0% auto 30px auto;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    width: 700px;
+}
+
+.imagem{
+    object-fit: cover;
+    width: 90vh;
+    height: 240px;
+    border-radius: 8px;
+}
+
+
+.icon{
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+    object-fit: cover;
+    position: relative;
+    bottom: 2px;
+}
+.card button{
+    margin-top: 15px;
+    padding: 12px 30px;
+    background: #30577d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 85vh;
+}
+
+.card button:hover{
+    background: #0d1c2b;
+}
+.div-info{
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}

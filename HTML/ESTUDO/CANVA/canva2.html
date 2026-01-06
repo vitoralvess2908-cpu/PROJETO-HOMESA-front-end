@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas - Animação</title>
+</head>
+<body>
+
+<h1>Canvas - Animação de um Retângulo</h1>
+<canvas id="meuCanvas" width="500" height="300" style="border:1px solid black;"></canvas>
+
+<script>
+    let canvas = document.getElementById("meuCanvas");
+    let ctx = canvas.getContext("2d");
+
+    // Posição inicial do retângulo
+    let x = 0;
+    let y = 100;
+
+    // Velocidade de movimento
+    let velocidade = 2;
+
+    function desenhar() {
+        // 1️⃣ Apagar tudo antes de redesenhar
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // 2️⃣ Cor e desenho do retângulo
+        ctx.fillStyle = "blue";
+        ctx.fillRect(x, y, 80, 50);
+
+        // 3️⃣ Atualizar posição (movimento)
+        x += velocidade;
+
+        // 4️⃣ Se sair da tela, volta para o começo
+        if (x > canvas.width) {
+            x = -80; // começa fora da tela para entrar de novo
+        }
+
+        // 5️⃣ Pedir para desenhar novamente no próximo frame
+        requestAnimationFrame(desenhar);
+    }
+
+    // Iniciar a animação
+    desenhar();
+</script>
+
+</body>
+</html>

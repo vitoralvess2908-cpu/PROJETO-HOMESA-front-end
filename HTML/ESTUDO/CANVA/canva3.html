@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas - Gráfico de Barras Animado</title>
+</head>
+<body>
+
+<h1>Canvas - Gráfico de Barras Animado</h1>
+<canvas id="meuCanvas" width="600" height="400" style="border:1px solid black;"></canvas>
+
+<script>
+    let canvas = document.getElementById("meuCanvas");
+    let ctx = canvas.getContext("2d");
+
+    // Valores finais das barras
+    let valoresFinais = [150, 75, 200, 50];
+    let labels = ["A", "B", "C", "D"];
+    let cores = ["#3498db", "#2ecc71", "#e67e22", "#9b59b6"];
+
+    // Alturas atuais (para animação)
+    let alturas = [0, 0, 0, 0];
+
+    // Velocidade de crescimento
+    let velocidade = 2;
+
+    function desenhar() {
+        // Limpa a tela
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        let larguraBarra = 80;
+        let espacamento = 40;
+        let baseY = canvas.height - 30; // onde as barras "encostam"
+
+        // Desenhar cada barra
+        for (let i = 0; i < valoresFinais.length; i++) {
+            // Se a barra ainda não chegou no valor final, aumenta
+            if (alturas[i] < valoresFinais[i]) {
+                alturas[i] += velocidade;
+            }
+
+            
+            // Desenha barra
+            ctx.fillStyle = cores[i];
+            ctx.fillRect(
+                espacamento + i * (larguraBarra + espacamento), // x
+                baseY - alturas[i], // y (cresce de baixo para cima)
+                larguraBarra,       // largura
+                alturas[i]          // altura
+            );
+
+            // Texto do valor
+            ctx.fillStyle = "#333";
+            ctx.font = "14px Arial";
+            ctx.fillText(
+                Math.floor(alturas[i]), 
+                espacamento + i * (larguraBarra + espacamento) + 20,
+                baseY - alturas[i] - 5
+            );
+
+            // Label
+            ctx.fillText(
+                labels[i],
+                espacamento + i * (larguraBarra + espacamento) + 30,
+                baseY + 15
+            );
+        }
+
+        requestAnimationFrame(desenhar);
+    }
+
+    desenhar();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+
+        .card {
+            width: 50vh;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            background: #fafafa;
+            color: var(--cor-secundaria);
+            padding: 1rem;
+            border-radius: 8px;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+ 
+        .imovel{
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+            display: flex;
+        }
+        .imovel img{
+             width: 100%;       /* ocupa a largura do card */
+            height: 200px; 
+            object-fit: cover;
+        }

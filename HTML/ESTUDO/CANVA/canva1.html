@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Canva Teste</h1>
+    <canvas id="meuCanvas" width="400" height="300" style="border: 1px solid black;"></canvas>
+
+    <script>
+        //PEGA O ELEMENTO CANVA 
+        let canvas = document.getElementById("meuCanvas");
+
+        //Cria o pincel do canva
+        let ctx = canvas.getContext("2d");
+
+        //Define a cor do preenchimento
+        ctx.fillStyle = "blue";
+
+        //Desenha o retangulo
+        ctx.fillRect(50,50,100,80);
+
+        //Cria outro retangulo
+        ctx.fillStyle = "red";
+        ctx.fillRect(175,50,100,80);
+
+        //Limpa os retangulos
+        ctx.clearRect(80,70,40,40);
+    </script>
+</body>
+</html>

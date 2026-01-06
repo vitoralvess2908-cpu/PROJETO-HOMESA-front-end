@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Canvas - Gráfico com Números Animados</title>
+</head>
+<body>
+  <h1>Canvas - Gráfico com Números Animados</h1>
+  <canvas id="meuCanvas" width="600" height="400" style="border:1px solid black;"></canvas>
+
+  <script>
+    const canvas = document.getElementById("meuCanvas");
+    const ctx = canvas.getContext("2d");
+
+    // Valores finais das barras
+    const valoresFinais = [150, 75, 200, 50];
+    const labels = ["A", "B", "C", "D"];
+    const cores = ["#3498db", "#2ecc71", "#e67e22", "#9b59b6"];
+
+    // Alturas atuais (para animação)
+    const alturas = [0, 0, 0, 0];
+    // Valores atuais para números animados
+    const numerosAnimados = [0, 0, 0, 0];
+
+    // Velocidade de crescimento
+    const velocidade = 2;
+
+    function desenhar() {
+      // Limpa o canvas a cada frame
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      const larguraBarra = 80;
+      const espacamento = 40;
+      const baseY = canvas.height - 30;
+
+      for (let i = 0; i < valoresFinais.length; i++) {
+        // Incrementa a altura da barra até o valor final
+        if (alturas[i] < valoresFinais[i]) {
+          alturas[i] += velocidade;
+          if (alturas[i] > valoresFinais[i]) alturas[i] = valoresFinais[i];
+        }
+
+        // Incrementa o número animado até o valor final
+        if (numerosAnimados[i] < valoresFinais[i]) {
+          numerosAnimados[i] += velocidade;
+          if (numerosAnimados[i] > valoresFinais[i]) numerosAnimados[i] = valoresFinais[i];
+        }
+
+        // Desenha a barra
+        ctx.fillStyle = cores[i];
+        ctx.fillRect(
+          espacamento + i * (larguraBarra + espacamento),
+          baseY - alturas[i],
+          larguraBarra,
+          alturas[i]
+        );
+
+        // Desenha o valor animado um pouco acima da barra
+        ctx.fillStyle = "#333";
+        ctx.font = "14px Arial";
+        ctx.fillText(
+          Math.floor(numerosAnimados[i]),
+          espacamento + i * (larguraBarra + espacamento) + 20,
+          baseY - alturas[i] - 5
+        );
+
+        // Desenha o label abaixo da barra
+        ctx.fillText(
+          labels[i],
+          espacamento + i * (larguraBarra + espacamento) + 30,
+          baseY + 15
+        );
+      }
+
+      requestAnimationFrame(desenhar);
+    }
+
+    desenhar();
+  </script>
+</body>
+</html>
